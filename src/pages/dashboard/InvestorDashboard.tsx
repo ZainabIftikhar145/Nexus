@@ -10,6 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Entrepreneur } from '../../types';
 import { entrepreneurs } from '../../data/users';
 import { getRequestsFromInvestor } from '../../data/collaborationRequests';
+import CalendarView from '../../components/meeting/CalendarView';
 
 export const InvestorDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -181,6 +182,10 @@ export const InvestorDashboard: React.FC = () => {
             )}
           </CardBody>
         </Card>
+      </div>
+       {/* Meeting Scheduler */}
+      <div className="mt-8">
+        <CalendarView />
       </div>
     </div>
   );
